@@ -9,9 +9,7 @@ ENV LOCAL_DOMAINS=@ \
     SMARTHOST= \
     SMTP_PASSWORD= \
     SMTP_USERDOMAIN= \
-    SMTP_USERNAME= \
-    SMTP_PLAINAUTH_USERNAME= \
-    SMTP_PLAINAUTH_USERNAME=
+    SMTP_USERNAME=
 
 RUN apk --no-cache add exim=$VERSION libcap && \
     mkdir -p /var/log/exim /usr/lib/exim /var/spool/exim && \

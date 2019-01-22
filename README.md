@@ -13,14 +13,10 @@ For extra security, the container runs as exim not root.
 
 This will allow relay from all private address ranges and will relay directly to the internet receiving mail servers
 
-Smtp Auth (`SMTP_PLAINAUTH_USERNAME` / `SMTP_PLAINAUTH_PASSWORD` ) is optional.
-
 ```shell
 docker run \
        --name smtp \
        --restart always \
-       -e SMTP_PLAINAUTH_USERNAME= \
-       -e SMTP_PLAINAUTH_PASSWORD= \
        -h my.host.name \
        -d \
        -p 25:25 \
